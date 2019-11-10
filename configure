@@ -10,9 +10,8 @@
 # Defaults:
 ac_help=
 ac_default_prefix=/usr/local
-
 # Any additions from configure.in:
-# ac_default_prefix=/usr/local
+ac_default_prefix=/usr/local
 ac_help="$ac_help
   --disable-warnings      turn OFF gcc compiler warnings (not recommended)"
 ac_help="$ac_help
@@ -67,15 +66,6 @@ includedir='${prefix}/include'
 oldincludedir='/usr/include'
 infodir='${prefix}/info'
 mandir='${prefix}/man'
-
-if [ -f HPUX.Install ]
-then
-  # HP-UX overrides
-  CC="cc"; CFLAGS="-O -Ae"
-  prefix=/opt/guiTAR; RANLIB="/bin/true"
-  with_gtk_prefix="/opt/gtk+"
-fi
-
 
 # Initialize some other variables.
 subdirs=

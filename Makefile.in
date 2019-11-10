@@ -379,7 +379,6 @@ mostlyclean: mostlyclean-recursive
 clean-am:  clean-hdr clean-tags clean-generic mostlyclean-am
 
 clean: clean-recursive
-	-rm -f config.cache
 
 distclean-am:  distclean-hdr distclean-tags distclean-generic clean-am
 
