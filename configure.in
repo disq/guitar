@@ -1,0 +1,300 @@
+
+dnl --------
+dnl shamelessly ripped from gnotepad+
+dnl --------
+
+AC_INIT(src/main.c)
+guiTAR_MAJOR_VERSION=0
+guiTAR_MINOR_VERSION=1
+guiTAR_MICRO_VERSION=4
+guiTAR_VERSION=$guiTAR_MAJOR_VERSION.$guiTAR_MINOR_VERSION.$guiTAR_MICRO_VERSION
+
+
+dnl AUTOMAKE_OPTIONS=no-dependencies
+VERSION=$guiTAR_VERSION
+PACKAGE=guiTAR
+
+
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+AC_SUBST(guiTAR_VERSION)
+AC_PREFIX_DEFAULT(/usr/local)
+
+
+dnl ---------------------------------------------------------------------------
+dnl checks for needed compilers
+dnl ---------------------------------------------------------------------------
+AC_PROG_CC
+
+
+dnl ---------------------------------------------------------------------------
+dnl clean compiles
+dnl ---------------------------------------------------------------------------
+compiler_warnings=yes
+AC_MSG_CHECKING(if we want compiler warnings)
+AC_ARG_ENABLE(
+	warnings,
+	[  --disable-warnings      turn OFF gcc compiler warnings (not recommended)],
+	compiler_warnings=no; AC_MSG_RESULT(no), AC_MSG_RESULT(yes)
+	)
+
+
+dnl ---------------------------------------------------------------------------
+dnl ansi warnings
+dnl ---------------------------------------------------------------------------
+AC_MSG_CHECKING(whether to compile with strict ANSI)
+AC_ARG_ENABLE(
+	ansi,
+	[  --enable-ansi           turn ON gcc strict ansi checking [default=no]],
+	,
+	[enable_ansi="no"])
+AC_MSG_RESULT($enable_ansi)
+
+
+if test "$ac_cv_prog_CC" = gcc -o "$ac_cv_prog_CC" = g++; then
+  if test $compiler_warnings = yes; then
+    if echo "$CFLAGS" | grep "\-Wall" > /dev/null 2> /dev/null; then
+      CFLAGS="$CFLAGS"
+    else
+      echo "updating CFLAGS with extra '-Wall' option"
+      CFLAGS="$CFLAGS -Wall"
+    fi
+  fi
+
+  if test "$enable_ansi" = "yes"; then
+    if echo "$CFLAGS" | grep "\-ansi" > /dev/null 2> /dev/null; then
+      CFLAGS="$CFLAGS"
+    else
+      CFLAGS="$CFLAGS -ansi"
+      echo "updating CFLAGS with extra '-ansi' option"
+    fi
+
+    if echo "$CFLAGS" | grep "\-pedantic" > /dev/null 2> /dev/null; then
+      CFLAGS="$CFLAGS"
+    else
+      CFLAGS="$CFLAGS -pedantic"
+      echo "updating CFLAGS with extra '-pedantic' option"
+    fi
+  fi
+fi
+
+
+dnl ---------------------------------------------------------------------------
+dnl gtkmyfilesel
+dnl ---------------------------------------------------------------------------
+with_myfilesel=yes
+AC_MSG_CHECKING(if compiling with GtkMyFilesel)
+AC_ARG_ENABLE(
+	myfilesel,
+	[  --disable-myfilesel     do not compile with GtkMyFilesel],
+	with_myfilesel=no; AC_MSG_RESULT(no), AC_MSG_RESULT(yes)
+	)
+
+if test x$with_myfilesel = xyes ; then
+	AC_DEFINE(MYFILESEL)
+fi
+
+
+dnl ---------------------------------------------------------------------------
+dnl now some other stuff
+dnl AC_CANONICAL_HOST  ... needs config.guess
+dnl ---------------------------------------------------------------------------
+AM_CONFIG_HEADER(config.h)
+AM_SANITY_CHECK
+AC_PROG_RANLIB
+
+
+dnl ---------------------------------------------------------------------------
+dnl check for GTK
+dnl ---------------------------------------------------------------------------
+AM_PATH_GTK(1.0.1,
+            [SAVE_GTK_LIBS="$GTK_LIBS"
+             SAVE_GTK_CFLAGS="$GTK_CFLAGS"],
+            AC_MSG_ERROR(Cannot find GTK+: Is gtk-config in executable path?))
+
+
+dnl ---------------------------------------------------------------------------
+dnl checks for correctly defined types
+dnl ---------------------------------------------------------------------------
+AC_TYPE_PID_T
+
+
+dnl ---------------------------------------------------------------------------
+dnl checks for header files & functions
+dnl ---------------------------------------------------------------------------
+dnl AC_CHECK_HEADERS(sys/mman.h)
+dnl AC_CHECK_FUNCS(putenv)
+
+
+dnl ---------------------------------------------------------------------------
+dnl gnome
+dnl ---------------------------------------------------------------------------
+AC_DEFUN([GNOME_INIT_HOOK],
+[
+	AC_SUBST(GNOME_LIBS)
+	AC_SUBST(GNOMEUI_LIBS)
+dnl	AC_SUBST(GNOMEGNORBA_LIBS)
+dnl	AC_SUBST(GTKXMHTML_LIBS)
+dnl	AC_SUBST(GNOME_APPLET_LIBS)
+	AC_SUBST(GNOME_LIBDIR)
+	AC_SUBST(GNOME_INCLUDEDIR)
+	AC_SUBST(GNOME_SHARE)
+	
+	AC_ARG_WITH(gnome-includes,
+		[  --with-gnome-includes   Specify location of GNOME headers],
+		[CFLAGS="$CFLAGS -I$withval"]
+	)
+
+	AC_ARG_WITH(gnome-libs,
+		[  --with-gnome-libs       Specify location of GNOME libs],
+		[LDFLAGS="$LDFLAGS -L$withval" gnome_prefix=$withval]
+	)
+
+	AC_ARG_WITH(gnome,
+		[  --with-gnome            Specify prefix for GNOME files],
+	 	if test x$withval = xyes; then
+			want_gnome=yes
+			ifelse([$1], [], :, [$1])
+		else
+			if test "x$withval" = xno; then
+				want_gnome=no
+			else
+				want_gnome=yes
+				LDFLAGS="$LDFLAGS -L$withval/lib"
+				CFLAGS="$CFLAGS -I$withval/include"
+				gnome_prefix=$withval/lib
+			fi
+		fi,
+		want_gnome=yes)
+
+	if test "x$want_gnome" = xyes; then
+		AC_PATH_PROG(GNOME_CONFIG,gnome-config,no)
+		if test "$GNOME_CONFIG" = "no"; then
+			no_gnome_config="yes"
+		else
+			AC_MSG_CHECKING(if $GNOME_CONFIG works)
+			if $GNOME_CONFIG --libs-only-l gnome >/dev/null 2>&1; then
+				AC_MSG_RESULT(yes)
+dnl				GNOME_GNORBA_HOOK([],$2)
+				GNOME_LIBS="`$GNOME_CONFIG --libs-only-l gnome`"
+				GNOMEUI_LIBS="`$GNOME_CONFIG --libs-only-l gnomeui`"
+dnl			        GNOMEGNORBA_LIBS="`$GNOME_CONFIG --libs-only-l gnorba gnomeui`"
+dnl				GTKXMHTML_LIBS="`$GNOME_CONFIG --libs-only-l gtkxmhtml`"
+dnl				GNOME_APPLET_LIBS="`$GNOME_CONFIG --libs-only-l applets`"
+				GNOME_LIBDIR="`$GNOME_CONFIG --libs-only-L gnorba gnomeui`"
+				GNOME_INCLUDEDIR="`$GNOME_CONFIG --cflags gnorba gnomeui`"
+				GNOME_SHARE="`$GNOME_CONFIG --prefix`/share"
+				$1
+			else
+				AC_MSG_RESULT(no)
+				no_gnome_config="yes"
+			fi
+		fi
+
+		if test x$exec_prefix = xNONE; then
+			if test x$prefix = xNONE; then
+				gnome_prefix=$ac_default_prefix/lib
+			else
+				gnome_prefix=$prefix/lib
+			fi
+		else
+			gnome_prefix=`eval echo \`echo $libdir\``
+		fi
+	
+		if test "$no_gnome_config" = "yes"; then
+			AC_MSG_CHECKING(for gnomeConf.sh file in $gnome_prefix)
+			if test -f $gnome_prefix/gnomeConf.sh; then
+				AC_MSG_RESULT(found)
+				echo "loading gnome configuration from" \
+					"$gnome_prefix/gnomeConf.sh"
+				. $gnome_prefix/gnomeConf.sh
+				$1
+			else
+				AC_MSG_RESULT(not found)
+				if test x$2 = xfail; then
+					AC_MSG_ERROR(Could not find the gnomeConf.sh file that is generated by gnome-libs install)
+				fi
+			fi
+		fi
+	fi
+])
+
+AC_DEFUN([GNOME_INIT],[
+	GNOME_INIT_HOOK([],fail)
+])
+
+
+
+dnl ---------------------------------------------------------------------------
+dnl check for gnome crap
+dnl ---------------------------------------------------------------------------
+AC_MSG_CHECKING(whether to use gnome)
+AC_ARG_ENABLE(gnome,
+	[  --disable-gnome         Do not try to use GNOME ],
+	enable_gnome="$enableval",)
+if test x$enable_gnome != xno ; then
+	AC_MSG_RESULT(yes)
+	GNOME_INIT_HOOK([have_gnome=yes])
+else
+	AC_MSG_RESULT(no)
+fi
+AM_CONDITIONAL(HAVE_GNOME, test x$have_gnome = xyes)
+rm -f using_gnome
+if test x$have_gnome = xyes ; then
+	AC_DEFINE(GNOME)
+	touch using_gnome
+fi
+
+
+dnl ---------------------------------------------------------------------------
+dnl add GTK_CFLAGS and GTK_LIBS to CFLAGS and LIBS
+dnl ---------------------------------------------------------------------------
+
+CFLAGS="$CFLAGS $GTK_CFLAGS"
+LIBS="$LIBS $GTK_LIBS"
+if test "$have_gnome" = "yes"; then
+	CFLAGS="$CFLAGS $GNOME_INCLUDEDIR"
+	LIBS="$LIBS $GNOME_LIBS $GNOMEUI_LIBS $GNOME_LIBDIR"
+fi
+
+
+dnl ---------------------------------------------------------------------------
+dnl Makefiles to create:
+dnl ---------------------------------------------------------------------------
+AC_OUTPUT(Makefile src/Makefile src/gtkmyfilesel/Makefile)
+
+
+dnl ---------------------------------------------------------------------------
+dnl output our configuration
+dnl ---------------------------------------------------------------------------
+echo
+echo these are the options selected:
+echo
+
+if test "$compiler_warnings" = "yes"; then
+	echo "    gcc compiler warnings         : YES"
+else
+	echo "    gcc compiler warnings         : NO"
+fi
+
+if test "$enable_ansi" = "yes"; then
+	echo "    gcc compile with strict ansi  : YES"
+else
+	echo "    gcc compile with strict ansi  : NO"
+fi
+
+if test "$have_gnome" = "yes"; then
+	echo "    using gnome                   : YES"
+else
+	echo "    using gnome                   : NO"
+fi
+
+
+if test "$with_myfilesel" = "yes"; then
+	echo "    compiling with GtkMyFilesel   : YES"
+else
+	echo "    compiling with  GtkMyFilesel  : NO"
+fi
+
+echo
+echo type "make" to build
+echo

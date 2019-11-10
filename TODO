@@ -1,0 +1,23 @@
+
+TODO list:
+
+  * Look inside the archive to determine the file type
+
+  * (*HELP*) I18N stuff without GNOME (I want something like GTK+ has, no
+    gettext sources in intl/, use gettext if detected in system) (*HELP*)
+
+  * Add preferences window
+  * Add a "recently used files" section in file menu
+  * Add an archive-info window, showing info and statistics
+  * Implement outgoing drops
+  * Implement drag&drop on the multiple file selection widget (GtkMyFilesel)
+  * Add support for more archive programs (maybe deb/rpm?)
+  * User-configurable archivers
+  * Implement full slpv6 support (when slpv6 is out)
+  * Add icons to toolbar (if you want to draw some icons, contact me)
+  * Enhance Gnome-Session-Manager stuff (?)
+  * Use Gnome's MDI functions when compiling with Gnome (uhh..)
+
+  * (*HELP*) Progressbar should also 'progress' when the program's waiting for
+    tar/zip/etc to finish. the code is commented out in gladesrc.c, it does
+	not work. (*HELP*)

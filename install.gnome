@@ -1,0 +1,12 @@
+
+if [ -e ./using_gnome ]; then
+  if [ "$1" = "uninstall" ]; then
+	rm `gnome-config --prefix`/share/pixmaps/guiTAR.xpm
+	rm `gnome-config --prefix`/share/gnome/apps/Utilities/guiTAR.desktop
+  else
+  	./mkinstalldirs `gnome-config --prefix`/share/pixmaps
+	cp -f src/guiTAR.xpm `gnome-config --prefix`/share/pixmaps/
+  	./mkinstalldirs `gnome-config --prefix`/share/gnome/apps/Utilities
+	cp -f guiTAR.desktop `gnome-config --prefix`/share/gnome/apps/Utilities/
+  fi
+fi

@@ -1,0 +1,15 @@
+Begin3
+Title:          guiTAR
+Version:        0.1.4
+Entered-date:   15MAR98
+Description:    guiTAR is a generic archive tool.
+Keywords:       tar, compress, zip, slp, lha, lzh, arj, rar, archive, GTK, GNOME
+Author:         disq@iname.com (Kemal Hadimli)
+Maintained-by:  disq@iname.com (Kemal Hadimli)
+Primary-site:   http://disq.bir.net.tr /guitar
+Alternate-site: sunsite.unc.edu /pub/Linux/utils/compress
+Original-site:  http://disq.bir.net.tr /guitar
+Platforms:      Platforms which GTK+ run on (Gtk+ 1.0.1 or higher required)
+Copying-policy: GPL
+End
+

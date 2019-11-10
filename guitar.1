@@ -1,0 +1,48 @@
+.TH guiTAR 1 "February 1999" "Kemal 'disq' Hadimli"
+.SH NAME
+guiTAR - generic archive tool for X
+.SH SYNOPSIS
+.B guitar
+[filename]
+.hy
+.SH DESCRIPTION
+.nh
+.I guiTAR
+is a generic archive tool written in \fIGTK+\fP, currently supporting
+tar, tar.Z, tar.gz, tar.bz2, bzip2-compressed-slp, zip, lzh(lha), arj, and rar files.
+.PP
+.I guiTAR
+can create, view, extract archives or add files to an existing archive.
+.PP
+.I guiTAR
+compiles with GTK+ 1.0.1 to GTK+ 1.2.x with no problems. Also
+GNOME support is available.
+.PP
+.I guiTAR
+uses tar, gzip, bzip2, zip/unzip, unarj, lha, rar/unrar, and GNU textutils.
+Only "sort" is needed from GNU textutils, guiTAR uses "sort" to reverse-sort
+the filelist when extracting files from a tar archive.
+.hy
+.SH filename
+guiTAR opens filename after initialization. This is useful for using guiTAR
+with various file managers and web browsers.
+.hy
+.SH OTHER INFORMATION
+GTK+ homepage is at http://www.gtk.org.
+
+GNOME homepage is at http://www.gnome.org.
+
+guiTAR homepage is at http://disq.bir.net.tr/guitar.
+.hy
+.SH FILES
+.TP
+~/gnome/guiTAR (if using a GNOME version)
+for saving the main window position and size
+.SH "SEE ALSO"
+.BR tar (1),
+.BR gzip (1),
+.BR bzip2 (1),
+.BR zip (1),
+.BR sort (1)
+.SH AUTHOR
+Kemal 'disq' Hadimli <disq@iname.com>

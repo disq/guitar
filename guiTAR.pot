@@ -1,0 +1,454 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid	""
+msgstr	"Project-Id-Version: PACKAGE VERSION\n"
+	"POT-Creation-Date: 1999-03-10 21:17-0700\n"
+	"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+	"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+	"Language-Team: LANGUAGE <LL@li.org>\n"
+	"MIME-Version: 1.0\n"
+	"Content-Type: text/plain; charset=CHARSET\n"
+	"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/gladesrc.c:266 src/gladesrc.c:397 src/gladesrc.c:448 src/gladesrc.c:858
+#: src/gladesrc.c:934 src/gladesrc.c:951 src/gladesrc.c:969
+msgid	" Please open a file first"
+msgstr	""
+
+#: src/gladesrc.c:274 src/gladesrc.c:406
+msgid	" Please select a file first"
+msgstr	""
+
+#: src/gladesrc.c:278
+msgid	" Deleting files..."
+msgstr	""
+
+#: src/gladesrc.c:290 src/gladesrc.c:321 src/gladesrc.c:379 src/gladesrc.c:844
+msgid	" Ok"
+msgstr	""
+
+#: src/gladesrc.c:291
+msgid	" Error deleting file"
+msgstr	""
+
+#: src/gladesrc.c:292 src/gladesrc.c:323 src/gladesrc.c:381 src/gladesrc.c:802
+#: src/gladesrc.c:846
+msgid	" Possibly error occured calling archiver"
+msgstr	""
+
+#: src/gladesrc.c:293 src/gladesrc.c:324 src/gladesrc.c:382 src/gladesrc.c:803
+#: src/gladesrc.c:847
+msgid	" Operation not supported by archiver"
+msgstr	""
+
+#: src/gladesrc.c:307
+msgid	" Adding file to archive..."
+msgstr	""
+
+#: src/gladesrc.c:322
+msgid	" Error adding file"
+msgstr	""
+
+#: src/gladesrc.c:342 src/gladesrc.c:492 src/gladesrc.c:715
+msgid	" File does not exist"
+msgstr	""
+
+#: src/gladesrc.c:350 src/gladesrc.c:723
+msgid	" You must add at least one file to the list"
+msgstr	""
+
+#: src/gladesrc.c:367
+msgid	" Viewing file..."
+msgstr	""
+
+#: src/gladesrc.c:380
+msgid	" Error viewing file"
+msgstr	""
+
+#: src/gladesrc.c:430
+msgid	" Please select a non-directory/non-link to view"
+msgstr	""
+
+#: src/gladesrc.c:496
+msgid	" Opening file..."
+msgstr	""
+
+#: src/gladesrc.c:517
+msgid	" Invalid filename"
+msgstr	""
+
+#: src/gladesrc.c:556
+msgid	"Open archive file"
+msgstr	""
+
+#: src/gladesrc.c:569
+msgid	" Please create/open a file first"
+msgstr	""
+
+#: src/gladesrc.c:574 src/gladesrc.c:579 src/gladesrc.c:668 src/gladesrc.c:673
+msgid	"Add file to archive"
+msgstr	""
+
+#: src/gladesrc.c:591 src/gladesrc.c:1255 src/menu.c:39
+msgid	"Create new archive"
+msgstr	""
+
+#: src/gladesrc.c:623 src/gladesrc.c:704
+msgid	" Please enter a filename"
+msgstr	""
+
+#: src/gladesrc.c:663 src/gladesrc.c:699
+msgid	" File exists! Click on 'open' to open file"
+msgstr	""
+
+#: src/gladesrc.c:735
+msgid	" Creating file..."
+msgstr	""
+
+#: src/gladesrc.c:801
+msgid	" Error creating file"
+msgstr	""
+
+#: src/gladesrc.c:830
+msgid	" Extracting files..."
+msgstr	""
+
+#: src/gladesrc.c:845
+msgid	" Error extracting file"
+msgstr	""
+
+#: src/gladesrc.c:866
+msgid	" Extraction of a seperate file not supported by archiver, unselect "
+	"all and extract all"
+msgstr	""
+
+#: src/gladesrc.c:870 src/gladesrc.c:1231 src/gladesrc.c:1277 src/menu.c:88
+msgid	"Extract files"
+msgstr	""
+
+#: src/gladesrc.c:916
+msgid	"Error(s) reverse-sorting filelist"
+msgstr	""
+
+#: src/gladesrc.c:1074
+msgid	"stats"
+msgstr	""
+
+#: src/gladesrc.c:1080
+msgid	"owner/group"
+msgstr	""
+
+#: src/gladesrc.c:1086
+msgid	"size"
+msgstr	""
+
+#: src/gladesrc.c:1092
+msgid	"date"
+msgstr	""
+
+#: src/gladesrc.c:1098
+msgid	"time"
+msgstr	""
+
+#: src/gladesrc.c:1104
+msgid	"file"
+msgstr	""
+
+#: src/gladesrc.c:1110
+msgid	"symlink"
+msgstr	""
+
+#: src/gladesrc.c:1225 src/gladesrc.c:1255
+msgid	"New"
+msgstr	""
+
+#: src/gladesrc.c:1225
+msgid	"New file"
+msgstr	""
+
+#: src/gladesrc.c:1226 src/gladesrc.c:1259
+msgid	"Open"
+msgstr	""
+
+#: src/gladesrc.c:1226 src/gladesrc.c:1259 src/menu.c:46
+msgid	"Open file"
+msgstr	""
+
+#: src/gladesrc.c:1227 src/gladesrc.c:1263 src/gladesrc.c:1436
+#: src/gladesrc.c:1520 src/gtkmyfilesel/gtkembedfilesel.c:660
+#: src/gtkmyfilesel/gtkmyfilesel.c:793
+msgid	"Close"
+msgstr	""
+
+#: src/gladesrc.c:1227 src/gladesrc.c:1263 src/menu.c:53
+msgid	"Close file"
+msgstr	""
+
+#: src/gladesrc.c:1229 src/gladesrc.c:1269
+msgid	"Add"
+msgstr	""
+
+#: src/gladesrc.c:1229 src/gladesrc.c:1269 src/menu.c:74
+msgid	"Add file"
+msgstr	""
+
+#: src/gladesrc.c:1230 src/gladesrc.c:1273
+msgid	"View"
+msgstr	""
+
+#: src/gladesrc.c:1230
+msgid	"View files"
+msgstr	""
+
+#: src/gladesrc.c:1231 src/gladesrc.c:1277
+msgid	"Extract"
+msgstr	""
+
+#: src/gladesrc.c:1232 src/gladesrc.c:1281
+#: src/gtkmyfilesel/gtkembedfilesel.c:862 src/gtkmyfilesel/gtkmyfilesel.c:995
+msgid	"Delete"
+msgstr	""
+
+#: src/gladesrc.c:1232 src/gladesrc.c:1281 src/menu.c:95
+msgid	"Delete files"
+msgstr	""
+
+#: src/gladesrc.c:1273 src/menu.c:81
+msgid	"View file"
+msgstr	""
+
+#: src/gladesrc.c:1291
+msgid	"About"
+msgstr	""
+
+#: src/gladesrc.c:1291 src/menu.c:129
+msgid	"About guiTAR"
+msgstr	""
+
+#: src/gladesrc.c:1294
+msgid	"Quit"
+msgstr	""
+
+#: src/gladesrc.c:1294
+msgid	"Quit guiTAR"
+msgstr	""
+
+#: src/gladesrc.c:1306
+msgid	"click on 'Open' to open a file"
+msgstr	""
+
+#: src/gladesrc.c:1377
+msgid	"Generic archive tool for GNOME.\n"
+	"\n"
+	"http://disq.bir.net.tr/guitar"
+msgstr	""
+
+#: src/gladesrc.c:1427
+msgid	"\n"
+	"    Generic archive tool in GTK+.\n"
+	"\n"
+	"    http://disq.bir.net.tr/guitar"
+msgstr	""
+
+#: src/gladesrc.c:1515
+msgid	" Error opening temporary file"
+msgstr	""
+
+#: src/menu.c:39
+msgid	"_New"
+msgstr	""
+
+#: src/menu.c:46
+msgid	"_Open"
+msgstr	""
+
+#: src/menu.c:53
+msgid	"_Close"
+msgstr	""
+
+#: src/menu.c:61
+msgid	"Q_uit"
+msgstr	""
+
+#: src/menu.c:61
+msgid	"Quit program"
+msgstr	""
+
+#: src/menu.c:74
+msgid	"_Add"
+msgstr	""
+
+#: src/menu.c:81
+msgid	"_View"
+msgstr	""
+
+#: src/menu.c:88
+msgid	"_Extract"
+msgstr	""
+
+#: src/menu.c:95
+msgid	"_Delete"
+msgstr	""
+
+#: src/menu.c:103
+msgid	"_Select all"
+msgstr	""
+
+#: src/menu.c:103
+msgid	"Select all files"
+msgstr	""
+
+#: src/menu.c:110
+msgid	"_Deselect all"
+msgstr	""
+
+#: src/menu.c:110
+msgid	"Deselect all files"
+msgstr	""
+
+#: src/menu.c:117
+msgid	"_Invert selection"
+msgstr	""
+
+#: src/menu.c:117
+msgid	"Invert the selection"
+msgstr	""
+
+#: src/menu.c:129
+msgid	"_About"
+msgstr	""
+
+#: src/menu.c:139
+msgid	"_File"
+msgstr	""
+
+#: src/menu.c:140
+msgid	"_Archive"
+msgstr	""
+
+#: src/menu.c:141
+msgid	"_Help"
+msgstr	""
+
+#: src/programs.c:200 src/programs.c:462 src/programs.c:747 src/programs.c:905
+#: src/programs.c:1255
+#, c-format
+msgid	"Ok - %lu bytes, %lu files"
+msgstr	""
+
+#: src/programs.c:229 src/programs.c:504 src/programs.c:934
+msgid	"Error(s) occured while creating/adding file"
+msgstr	""
+
+#: src/programs.c:259 src/programs.c:548 src/programs.c:964
+msgid	"Error(s) occured while deleting file"
+msgstr	""
+
+#: src/programs.c:345 src/programs.c:581 src/programs.c:636 src/programs.c:797
+#: src/programs.c:997 src/programs.c:1052 src/programs.c:1387
+#: src/programs.c:1435
+msgid	"Error(s) occured while extracting file"
+msgstr	""
+
+#: src/programs.c:1096
+msgid	"Error(s) decompressing file"
+msgstr	""
+
+#: src/programs.c:1105
+msgid	"Error(s) compressing file"
+msgstr	""
+
+#: src/programs.c:1110
+msgid	"Error(s) moving file after compression"
+msgstr	""
+
+#: src/programs.c:1179
+msgid	"Error(s) opening file"
+msgstr	""
+
+#: src/programs.c:1291
+msgid	"Error(s) occured while creating archive"
+msgstr	""
+
+#: src/programs.c:1323
+msgid	"Error(s) occured while adding file"
+msgstr	""
+
+#: src/programs.c:1353
+msgid	"Error(s) occured while deleting file(s)"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:390 src/gtkmyfilesel/gtkmyfilesel.c:447
+msgid	"Files"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:428
+#: src/gtkmyfilesel/gtkembedfilesel.c:1359 src/gtkmyfilesel/gtkmyfilesel.c:560
+#: src/gtkmyfilesel/gtkmyfilesel.c:1515
+#, c-format
+msgid	"Directory unreadable: %s"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:459 src/gtkmyfilesel/gtkmyfilesel.c:592
+msgid	"Create Dir"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:470
+#: src/gtkmyfilesel/gtkembedfilesel.c:840 src/gtkmyfilesel/gtkmyfilesel.c:603
+#: src/gtkmyfilesel/gtkmyfilesel.c:973
+msgid	"Delete File"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:481
+#: src/gtkmyfilesel/gtkembedfilesel.c:944 src/gtkmyfilesel/gtkmyfilesel.c:614
+#: src/gtkmyfilesel/gtkmyfilesel.c:1077
+msgid	"Rename File"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:642 src/gtkmyfilesel/gtkmyfilesel.c:775
+msgid	"Error"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:735 src/gtkmyfilesel/gtkmyfilesel.c:868
+msgid	"Create Directory"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:749 src/gtkmyfilesel/gtkmyfilesel.c:882
+msgid	"Directory name:"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:762 src/gtkmyfilesel/gtkmyfilesel.c:895
+msgid	"Create"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:771
+#: src/gtkmyfilesel/gtkembedfilesel.c:871
+#: src/gtkmyfilesel/gtkembedfilesel.c:986 src/gtkmyfilesel/gtkmyfilesel.c:529
+#: src/gtkmyfilesel/gtkmyfilesel.c:904 src/gtkmyfilesel/gtkmyfilesel.c:1004
+#: src/gtkmyfilesel/gtkmyfilesel.c:1119
+msgid	"Cancel"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:977 src/gtkmyfilesel/gtkmyfilesel.c:1110
+msgid	"Rename"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkembedfilesel.c:1338
+#: src/gtkmyfilesel/gtkmyfilesel.c:1494
+msgid	"Selection: "
+msgstr	""
+
+#: src/gtkmyfilesel/gtkmyfilesel.c:428
+msgid	"Directories"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkmyfilesel.c:486
+msgid	"Selected files"
+msgstr	""
+
+#: src/gtkmyfilesel/gtkmyfilesel.c:522
+msgid	"OK"
+msgstr	""

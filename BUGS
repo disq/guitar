@@ -1,0 +1,20 @@
+
+Bugs, AKA features ;)
+
+   feature: I can't see any progressbars in my pre-GTK+-1.1.0 system.
+   feature: I can't see any menus in my pre-GTK+-1.1.2 system.
+   feature: "Select All"/"Deselect All" does not in my pre-GTK+-1.1.2 system.
+   feature: Clicking on the filelist titles does not sort the filelist in my
+	        pre-GTK+-1.1.2 system.
+   feature: DND does not work in my pre-GTK+-1.1.4 system.
+   feature: It doesn't autohide the columns in my pre-GTK+-1.1.6 system.
+
+  solution: Upgrade your GTK+ to 1.2.x
+
+
+
+       bug: I can't resize! It just restores the original size.
+       bug: The progressbar is not updated when running the external program.
+
+  solution: find a solution and report(also, a patch is appreciated). thanx.
+

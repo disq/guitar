@@ -1,0 +1,74 @@
+
+guiTAR 0.1.4, by Kemal 'disq' Hadimli
+Copyright (c) 1998, 1999
+
+
+
+Description
+~~~~~~~~~~~
+guiTAR is a generic archive tool, currently supporting tar, tar.Z, tar.gz,
+tar.bz2, bzip2-compressed-slp, zip, lzh(lha), arj, and rar files.
+
+
+Needed to compile/run
+~~~~~~~~~~~~~~~~~~~~~
+minimum: X11R6, GTK+ v1.0.1 (not tested, but should work)
+recommended: X11R6, GTK+ v1.2.0 or newer (Get GTK+ from www.gtk.org)
+highly recommended: X11R6, GNOME 0.99.x or newer (Get GNOME from www.gnome.org)
+
+You need tar, gzip, bzip2, zip/unzip, unarj, lha, rar/unrar and GNU textutils.
+
+tar and GNU textutils are mandatory for .tar*
+gzip is mandatory for .tar.gz (.tgz)
+bzip2 is mandatory for .tar.bz2
+zip/unzip are mandatory for .zip
+unarj is mandatory for .arj
+lha is mandatory for .lzh(.lha)
+rar/unrar are mandatory for .rar
+
+This version is tested with GTK+ 1.2.0, GNOME 1.0.0, GNU tar 1.12,
+gzip 1.2.4, unzip 2.1, bzip2 0.9.0c, lha 1.02, unarj 2.41a demo version,
+rar/unrar 2.02, GNU textutils 1.22, Linux 2.2.1, and glibc 2.1.
+
+
+Compilation & Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+configure
+make
+make install
+:)
+
+type "guitar" to run the program
+
+
+Help
+~~~~
+man guitar
+
+
+Uninstallation
+~~~~~~~~~~~~~~
+make uninstall
+
+
+Homepage
+~~~~~~~~
+http://disq.bir.net.tr/guitar
+also have a mirror at http://artemis.efes.net/disq/guitar
+
+
+Credits
+~~~~~~~
+see the AUTHORS file.
+
+
+Comments
+~~~~~~~~
+disq@bir.net.tr
+
+
+Other
+~~~~~
+The latest stable version is 0.0.7pl1. (NOT 0.0.8!)
+Icons are welcome. :)
+

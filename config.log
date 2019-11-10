@@ -1,0 +1,35 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:587: checking for a BSD compatible install
+configure:640: checking whether build environment is sane
+configure:697: checking whether make sets ${MAKE}
+configure:743: checking for working aclocal
+configure:756: checking for working autoconf
+configure:769: checking for working automake
+configure:782: checking for working autoheader
+configure:795: checking for working makeinfo
+configure:815: checking for gcc
+configure:928: checking whether the C compiler (gcc  ) works
+configure:944: gcc -o conftest    conftest.c  1>&5
+configure:970: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:975: checking whether we are using GNU C
+configure:984: gcc -E conftest.c
+configure:1003: checking whether gcc accepts -g
+configure:1038: checking if we want compiler warnings
+configure:1051: checking whether to compile with strict ANSI
+configure:1093: checking if compiling with GtkMyFilesel
+configure:1116: checking whether build environment is sane
+configure:1156: checking for ranlib
+configure:1235: checking for gtk-config
+configure:1270: checking for GTK - version >= 1.0.1
+configure:1371: gcc -o conftest -g -O2 -Wall -I/opt/gtk+/include -I/usr/include/X11R6 -I/opt/glib/lib/glib/include -I/opt/glib/include   conftest.c -L/opt/gtk+/lib -lgtk -lgdk -L/opt/glib/lib -Wl,-E -lgmodule -lglib -ldld -lXext -lX11 -lm  1>&5
+configure:1457: checking how to run the C preprocessor
+configure:1478: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1537: checking for ANSI C header files
+configure:1550: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1617: gcc -o conftest -g -O2 -Wall   conftest.c  1>&5
+configure:1641: checking for pid_t
+configure:1684: checking whether to use gnome
+configure:1741: checking for gnome-config
+configure:1805: checking for gnomeConf.sh file in /opt/tmp/guitar/lib

@@ -1,0 +1,130 @@
+
+
+ Version 0.1.4  -  March 15th 1999
+  * You can now select more than one file in the same dir and add them all
+    together to the "Selected files" list in the multiple file selection
+    widget.
+  * Keeping track of last directory we left - Open and Extract only
+    (even saving to disk if GNOME)
+  * added minimised-icon (icon by Pierre Breteau)
+  * fixed install.gnome for gnome 1.0's $prefix/share/gnome/apps/ thing
+  * Really fixed the "Quit" item in toolbar (GTK+ 1.0.x only)
+  * Added close button to view window
+  * Invert selection added (GTK+ 1.1.x and later)
+  * Now you can't just press OK when the new add-file window pops up. So, you
+    can't (try to) create an empty archive.
+
+
+ Version 0.1.3  -  March 1st 1999
+  * Fixed a strange error when extracting a file
+  * Added multiple file selector (for add and create)
+  * Updated the BUGS file
+  * (Gtk+ 1.0.x only) quit button on toolbar should work now.
+    (found by Dominik Brettnacher)
+  * added manpage. now you can do a "man guitar"
+  * improved dnd. add files if dragged on the filelist. otherwise, try to
+    open the file(s).
+  * fixed "make install" (had problems without GNOME), added "make uninstall"
+  * fixed overwrite-filename-while-adding-extension bug, which sometimes
+    occured when creating a file
+
+
+ Version 0.1.2  -  February 27th 1999
+  * rar support (using both rar(add/delete) and unrar(open/view/extract))
+  * bugfix! won't list the contents of the magnetic tape ;)
+    (found/fixed by Martin Schulze)
+  * made extensions mandatory when creating a file. extensions automatically
+    added if they're not there.
+  * added logo for the gnome version (logos by Pierre Breteau)
+  * changed program logo (gtk)
+  * little arj (open, extract all) support (using unarj)
+  * lzh(lha) support (using lha)
+  * Gtk+ 1.0.6 fix by Dominik Brettnacher
+
+
+ Version 0.1.1  -  February 21st 1999
+  * removed activation keys from the popup menu. (they're already on the
+    pulldown menus)
+  * reordered toolbar and popup menu, added seperators to toolbar (again)
+  * fixed the small size column. also right-justified it.
+  * A lame workaround to "tar: Removing leading `/' from absolute path names"
+    warning, written to STDERR
+  * If the archive is created by us, use the specified compression ratio when
+    adding a file.
+  * removed all cpp comments from sources
+  * Added autoconf/automake stuff
+  * Create an archive
+  * Added drag'n'drop support (only incoming drops - tested with gmc and works
+    well)
+  * bugfix: adding files is now done correctly
+
+
+ Version 0.0.8  -  February 17th 1999
+  * Total bytes/files are now shown on statusbar after extraction
+  * When extracting a file sometimes tar couldn't create some directories.
+    now reverse-sorting the filelist before extraction, so it can.
+	(from now on, gnu textutils needed to work)
+  * Add/Delete files into/from an archive (backups filename to filename~)
+  * Now we are more modular ;)
+  * Unused columns (by zip) are now hidden.
+  * i18n support for GNOME (not in popup menu yet) (not tested)
+  * added pulldown & popup menus (both Gtk+ and GNOME)
+  * saving window position & size on exit now. (GNOME)
+  * now titles do not scroll with the list.
+
+
+ Version 0.0.7pl1  -  January 10th 1999
+  * uh. fix compability with Gtk+ 1.0.x, again and again. sorry guys. this
+    compability thing sucks.
+  * added release-dates to ChangeLog
+
+
+ Version 0.0.7  -  January 08th 1999
+  * updated README
+  * changed name from GuiTAR to guiTAR in the code
+  * implemented multiple document interface
+  * clist column resize code fixed. now some columns are unresizeable, and
+    some are auto-resizing.
+  * fix compability with Gtk+ 1.0.x, again.
+
+
+ Version 0.0.6  -  January 04th 1999
+  * progressbar added. need to 'progress' it when waiting for the external
+    program to finish. but it doesn't work!
+  * zip support (tested with Unzip 5.31)
+  * Nasty 'View file' bug fixed.
+  * GNOME-Session-Manager stuff added, but saving nothing ;)
+  * Fixed typos in the Makefile.
+  
+
+ Version 0.0.5  -  December 26th 1998
+  * If a tar-error occurs, a view window is opened with errors in it.
+  * ChangeLog format changed ;)
+  * GuiTAR is now half/GNOME compliant. (no session manager stuff yet)
+  * Filename with spaces bug fixed.
+
+
+ Version 0.0.4  -  December 19th 1998
+  * Compability with Gtk 1.1.5 and later
+  * Minor changes in the ui code
+
+  
+ Version 0.0.3  -  November 05th 1998
+  * View file added.
+  * The list now shows symlinks also, and the bug in parsing symlink files
+    fixed.
+  * Temporary files are now deleted :)
+  * Extract-to-directory bug fixed.
+  * Compilation problem on Gtk+ 1.0.1 fixed.
+
+
+Version 0.0.2  -  October 30th 1998
+  * Compilation problem on Gtk+ 1.0.x fixed.
+  * Parameter support added.
+  * Support for .slp files added.
+  * Cosmetic: Left-justified everything in the GtkClist title.
+
+
+Version 0.0.1  -  October 29th 1998
+  * Initial release.
+
